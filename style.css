@@ -1,0 +1,22 @@
+
+
+#header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    margin-bottom: 5px;
+    background-color: aqua;
+}
+
+#heading {
+    font-size: 30px;
+    padding-left: 0px;
+}
+
+.link{
+    padding-right: 10px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+#body {
+    text-align: center;
+}
