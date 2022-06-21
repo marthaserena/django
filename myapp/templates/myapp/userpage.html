@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Library App</title>
-    <link rel="stylesheet" href="userpage.css">
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'userpage.css'%}">
   </head>
   <body>
     <div >
@@ -14,9 +15,8 @@
     </div>
     <div>
       <p>What are you logging in as?</p>
-        <button class="student-button">Student</button>
-      <button class="librarian-button">Librarian</button>
-      <img src="library.jpg" alt="image">
+      <button class="student-button"><a href="/login">Student</a></button>
+      <button class="librarian-button"><a href="/login">Librarian</a></button>
     </div>  
     
   </body>
