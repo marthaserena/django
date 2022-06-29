@@ -1,66 +1,94 @@
-
-  
-  .student-button{
-    background-color:rgb(0, 238, 255) ;
-    color: white;
-    margin-right: 8px;
-    border-color:none;
-    cursor:pointer;
-    height: 40px;
-    width: 74px;
-    font-weight: 15px;
-    transition: 0.15s;
-  }
-  .student-button:active{
-    opacity: 0.7s;
-  }
-
-  .librarian-button{
-    background-color:rgb(0, 183, 255);
-    color:black;
-    border-color: none;
-    cursor:pointer ;
-    height: 36px;
-    width: 74px;
-    font-weight: 15px;
-    transition: 0.15s;
-    margin-left: 8px;
-  }
-  .librarian-button:active{
-    opacity: 0.7s;
-  }
-
-  body{
-    color: black;
-    background-color:rgb(255, 255, 255) ;
-    font-style: normal;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-  }
-li h1{
-  display: inline;
-  color:white;
+body{
+  background-image: url(/static/images/library-image1.jpeg);
+  background-size: cover;
+  font-style: normal;
   text-align: center;
-  padding:14px 16px;
-}
-ul{
-  list-style-type: none;
-  margin:0px;
-  padding:0px;
-  overflow:hidden;
-  background-color:black;
 }
 
 img {
+  width: 300px;
   height: 200px;
-  width:200px;
-  position: absolute;
-  top: 200px;
-  left:30px;
-  right:200px;
 }
 
-.active{
-  background-color: green;
+nav {
+  background-color:gainsboro ;
+  padding-bottom: 60px;
+  opacity: 0.8;
 }
-  
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: darkseagreen;
+}
+
+#logo {
+  float: left;
+  font-size: 30px;
+}
+
+ul{
+  list-style-type: none;
+  margin-top: 0px;
+} 
+
+li {
+  color:white;
+  padding:14px 16px;
+  float: right;
+  font-size: 20px;
+}
+
+.user-select {
+  align-items: center;
+  padding: 100px;
+  margin-left: 430px;
+  margin-top: 180px;
+  width: fit-content;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.user-select p {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.student-button{
+  font-size: 20px;
+  padding: 20px;
+  margin-right: 40px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.student-button:hover {
+  background-color: darkgray;
+}
+
+.librarian-button{
+  border-color: none;
+  font-size: 20px;
+  margin-left: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.librarian-button:hover {
+  background-color: darkgray;
+}
