@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <link  rel="stylesheet" href="{% static 'login.css'%}"><br>
+    <title>Login</title>
+    
+</head>
+<body>
+    <div id="header">
+        <H1>WELCOME TO MY LIBRARY APP &#128218;</H1>
+        <!-- THE NAVIGATION BAR WILL GO HERE -->
+
+        <ul>
+          <li><a href="home">HOME</a></li>
+          <li><a href="about_us">ABOUT US</a></li>
+          <li> <a href="contact_us">CONTACT</a></li>
+           
+        </ul>
+    </div>
+
+
+     <div id="body">
+      <H2>LOGIN</H2><!--create a css to work on this section
+        -should be in a box like structure 
+       -centre alligned on page
+       -big to see and sensetial
+       -->
+
+        <form>
+
+        <label for="name">UserName:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="pwd">Password:</label><br>
+        <!-- #need to creat a link for forgotten password-->
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <button type="submit">Login</button><br><br>
+        <button type="submit"><a href="/register">Create Account</a></button>                 
+        <!-- creating an account  yeah thats it-->
+
+    </div>
+        
+</body>
+</html>

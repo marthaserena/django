@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library App</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'userpage.css'%}">
+  </head>
+  <body>
+    <div >
+      <nav>
+        <ul>
+          <li id="logo"><a href="#Library App">Library App</a></li>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="user-select">
+      <p>What are you logging in as?</p>
+      <button class="student-button"><a href="/login">Student</a></button>
+      <button class="librarian-button"><a href="/login">Librarian</a></button>
+    </div>  
+    
+  </body>
+</html>
+
