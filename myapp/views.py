@@ -29,3 +29,7 @@ def register(request):
 
         return redirect("signin")
     return render(request, "myapp/register.html")
+    
+def icon(request):
+    return render(request, "myapp/icon.html")
+        

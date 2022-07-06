@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%load static%}
+  <link rel="stylesheet" href="{%static 'userpage.css'%}">
     <title>Library App</title>
-    {%load static%}
-    <link rel="stylesheet" href="{%static 'userpage.css'%}">
+  
   </head>
   <body>
-    <div >
-      <nav>
+    <nav>
         <ul>
-          <li id="logo"><a href="#Library App">Library App</a></li>
+          <li id="logo">Library App</li>
           <li><a href="#Home">Home</a></li>
           <li><a href="#About">About</a></li>
+          <li><a href="#Contact_Us">Contact_Us</a></li>
+
         </ul>
       </nav>
-    </div>
+    
     <div class="user-select">
       <p>What are you logging in as?</p>
       <button class="student-button"><a href="/login">Student</a></button>
@@ -22,5 +27,3 @@
     </div>  
     
   </body>
-</html>
-
