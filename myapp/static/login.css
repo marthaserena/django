@@ -1,4 +1,11 @@
-.log1{
+body{
+  background-image: url(/static/images/library-image1.jpeg);
+  background-size: cover;
+  font-style: normal;
+  text-align: center;
+}
+
+#log1{
 	border: ridge;
 	color: blue;
 	padding: 50px;
@@ -7,10 +14,14 @@
 	box-sizing: content-box;
 	width: 300px;
 	height: 200px;
-	border-radius: 20px;
+	border-radius: 10px;
 	
 }
 
+nav {
+  background-color:gainsboro ;
+  padding-bottom:30px;
+}
 nav{
   background-color:gainsboro ;
   padding-bottom: 20px;
@@ -54,12 +65,6 @@ li {
   padding:10px;
   float: left;
   font-size:20px;
-}
-body{
-  background-image: url(/static/images/library-image1.jpeg);
-  background-size: cover;
-  font-style: normal;
-  text-align: center;
 }
 
 .Login{
