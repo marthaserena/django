@@ -3,3 +3,7 @@ from .models import Student
 
 # Register your models here.
 admin.site.register(Student)
+from .models import Borrowers
+
+admin.site.register(Borrowers)
+
