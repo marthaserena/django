@@ -7,21 +7,17 @@
 	box-sizing: content-box;
 	width: 300px;
 	height: 200px;
-	border-radius: 5px;
+	border-radius: 20px;
 	
 }
 
-{
+nav{
   background-color:gainsboro ;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   opacity: 0.8;
 }
 
-nav {
-  background-color:gainsboro ;
-  padding-bottom:30px;
-  opacity:;
-}
+
 
 a {
   color: black;
@@ -35,15 +31,15 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
+
+
+a:hover, a.active{
+  background: none;
+  color: rgb(78, 75, 75);
 }
 
-a:active {
-  text-decoration: darkseagreen;
-}
 
-##logo {
+#logo {
   float: left;
   font-size: 30px;
 }

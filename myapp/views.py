@@ -11,3 +11,7 @@ def login(request):
 
 def register(request):
     return render(request, "myapp/register.html")
+    
+def icon(request):
+    return render(request, "myapp/icon.html")
+        
