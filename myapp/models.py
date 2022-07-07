@@ -1,4 +1,7 @@
+from http.client import PAYMENT_REQUIRED
+from tkinter import CASCADE
 from turtle import title
+from xmlrpc.client import DateTime
 from django.db import models
 
 class Librarian(models.Model):
@@ -6,12 +9,15 @@ class Librarian(models.Model):
     LastName = models.CharField(max_length=100)
     Password = models.CharField(max_length=50)
     UserName = models.CharField(max_length=100)
+    Email =models.CharField(max_length=128)
+    
 
     def __str__(self):
         return self.UserName
 
 # Create your models here.
 class Book(models.Model):
+    #PostBook = models.ForeignKey(Librarian, on_delete = models.CASCADE)
     author = models.CharField(max_length=100)
     book_title = models.CharField(max_length=200)
     publish_date = models.DateField()
@@ -32,6 +38,18 @@ class Student(models.Model):
     def __str__(self):
         return self.UserName
 class Borrowers (models.Model):
-    book_id= models.CharField
-    Return_date=models.DateField
-    Date_taken=models.DateField
+    #borrowedBook= models.ForeignKey(Book, on_delete=CASCADE)
+    Return_date=models.DateTimeField(auto_now_add=True)
+    Date_taken=models.DateTimeField(auto_now_add=True)
+    BorrowerId = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.BorrowerId
+
+class Payments(models.Model):
+    #fine=models.ForeignKey(Student,on_delete=CASCADE)
+    book_id=models.CharField(max_length=100)
+    PAYMENT_REQUIRED=models.CharField(max_length=100)
+    DatePaid=models.DateTimeField(auto_now_add=True)
+    Date_Bookreturned=models.DateTimeField(auto_now_add=True)
+    
