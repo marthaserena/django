@@ -15,9 +15,9 @@ class Librarian(models.Model):
     def __str__(self):
         return self.UserName
 
-# Create your models here.
+
 class Book(models.Model):
-    #PostBook = models.ForeignKey(Librarian, on_delete = models.CASCADE)
+    PostBook = models.ForeignKey(Librarian, on_delete = models.CASCADE)
     author = models.CharField(max_length=100)
     book_title = models.CharField(max_length=200)
     publish_date = models.DateField()
@@ -32,13 +32,13 @@ class Student(models.Model):
     LastName = models.CharField(max_length=100)
     FirstName= models.CharField(max_length=100)
     Password = models.CharField(max_length=100)
-    Email =models.CharField(max_length=128)
+    Email = models.EmailField(max_length=128)
 
 
     def __str__(self):
-        return self.UserName
+        return self.username
 class Borrowers (models.Model):
-    #borrowedBook= models.ForeignKey(Book, on_delete=CASCADE)
+    borrowedBook= models.ForeignKey(Book, on_delete=models.CASCADE)
     Return_date=models.DateTimeField(auto_now_add=True)
     Date_taken=models.DateTimeField(auto_now_add=True)
     BorrowerId = models.CharField(max_length=100)
@@ -47,9 +47,13 @@ class Borrowers (models.Model):
         return self.BorrowerId
 
 class Payments(models.Model):
-    #fine=models.ForeignKey(Student,on_delete=CASCADE)
+    fine=models.ForeignKey(Student,on_delete=models.CASCADE)
     book_id=models.CharField(max_length=100)
     PAYMENT_REQUIRED=models.CharField(max_length=100)
     DatePaid=models.DateTimeField(auto_now_add=True)
     Date_Bookreturned=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.book_id
+        
     
