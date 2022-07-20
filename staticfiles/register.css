@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.form {
+    padding: 50px;
+}
+
+.item {
+    padding-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.input-field {
+    width: 20%;
+    border-radius: 5px;
+    border-color: darkgrey;
+    height: 20px;
+    border-width: thin;
+}
+
+.agree {
+    font-size: 20px;
+}
+
+button {
+    padding: 10px;
+    width: 100px;
+    font-size: large;
+    border-radius: 5px;
+    border-width: thin;
+}
