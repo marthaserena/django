@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CreatUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from .models import Book
 
 
 
@@ -49,9 +50,17 @@ def home(request):
 
 
 def icon(request):
-    return render(request, "myapp/icon.html")
+	books = Book.objects.all()
+	return render(request, "myapp/icon.html",{'books':books})
 
 
 def logout(request):
 	logout()
 	return redirect('login')
+
+
+def borrow(request):
+	return render(request, "myapp/borrow.html")
+
+
+

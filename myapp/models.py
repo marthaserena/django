@@ -22,7 +22,7 @@ class Book(models.Model):
     book_title = models.CharField(max_length=200)
     publish_date = models.DateField()
     book_id = models.CharField(max_length=100)
-    book_image = models.CharField(max_length=1000)
+    Status = models.CharField(max_length=1000, default="available")
     book_collection = models.CharField(max_length=300)
 
     def __str__(self):
