@@ -9,7 +9,7 @@
 
 body{
      font-family: Georgia, 'Times New Roman', Times, serif;
-     background-image: url(/static/images/library-image1.jpeg);
+     /* background-image: url(/static/images/library-image1.jpeg); */
  }
  nav{
     background-color: rgb(47, 49, 49);
