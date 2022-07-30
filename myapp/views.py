@@ -51,6 +51,20 @@ def home(request):
 
 def icon(request):
 	books = Book.objects.all()
+	if request.method =='GET':
+		q = request.GET.get('q')
+		r = request.GET.get('r')
+		t = request.GET.get('t')
+		if q:
+			books = Book.objects.filter(book_title__icontains=q)
+		if r:
+			books = Book.objects.filter(book_collection__icontains=r)
+		elif t:
+			books = Book.objects.filter(author__icontains=t)
+			
+	else:
+		books = Book.objects.all()
+
 	return render(request, "myapp/icon.html",{'books':books})
 
 

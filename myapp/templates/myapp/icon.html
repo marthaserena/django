@@ -7,7 +7,7 @@
     {% load static%}
     <link rel="stylesheet" href="{% static 'style_icon.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>dashboard_page(student)</title>
+        <title>Dashboard</title>
 </head>
 <body>
     <nav>
@@ -15,12 +15,19 @@
         <label for="check" class="checkbtn">
             <i class="fa fa-bars"></i>
         </label>
-        <label class="logo"> LIBRARYAPP STUDENT</label>
+        <label class="logo"> LIBRARYAPP</label>
         <ul>
             <li><a class ="active" href="dashboard" class="active">DASHBOARD</a> </li>
             <li><a href="#about_us">ABOUT US</a></li>
             <li><a href="#contact_us">CONTACT US</a></li>
-            <input type="text" placeholder="Search..">
+            <form action = "" method="get">
+            <input type="text" name="q" placeholder="Title search">
+            <button type="submit">Search</button>
+            <input type="text" name="r" placeholder="Author search">
+            <button type="submit">Search</button>
+            <input type="text" name="t" placeholder="Suject Area">
+            <button type="submit">Search</button>
+            </form>
         </ul>
     
     </nav>
