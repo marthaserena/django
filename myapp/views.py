@@ -59,7 +59,7 @@ def icon(request):
 			books = Book.objects.filter(book_title__icontains=q)
 		if r:
 			books = Book.objects.filter(book_collection__icontains=r)
-		elif t:
+		if t:
 			books = Book.objects.filter(author__icontains=t)
 			
 	else:
