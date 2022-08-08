@@ -57,7 +57,7 @@ def icon(request):
 		t = request.GET.get('t')
 		if q:
 			books = Book.objects.filter(book_title__icontains=q)
-		if r:
+		if r: 
 			books = Book.objects.filter(book_collection__icontains=r)
 		if t:
 			books = Book.objects.filter(author__icontains=t)
