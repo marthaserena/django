@@ -73,7 +73,15 @@ def logout(request):
 	return redirect('login')
 
 
-def borrow(request):
+def borrow(request,book_id):
+	book = Book.objects.get(book_id)
+	# if request.method == 'GET':
+	if Book.Status == 'available':
+		book.Status = 'unavailable'
+		book.save()
+
+	#return redirect('icon')
+
 	return render(request, "myapp/borrow.html")
 
 
