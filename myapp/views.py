@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CreatUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from .models import Book
+from .models import Book, Borrowers
 
 
 
@@ -72,17 +72,21 @@ def logout(request):
 	logout()
 	return redirect('login')
 
+def borrow(request, bookid):
+	book = Book.objects.get(book_id=bookid)
+	book.status=False
+	book.save()
+	# return render(request, "myapp/borrow.html")
+	return redirect('icon')
 
-def borrow(request,book_id):
-	book = Book.objects.get(book_id)
-	# if request.method == 'GET':
-	if Book.Status == 'available':
-		book.Status = 'unavailable'
-		book.save()
-
-	#return redirect('icon')
-
-	return render(request, "myapp/borrow.html")
+# def addBorrower(request):
+# 	if request.method == 'POST':
+# 		bookid = request.POST['bookid']
+# 		borrowerid = request.POST['borrowerid']
+# 		book = Book.objects.get(book_id=bookid)
+# 		new = Borrowers(borrowedBook=book.book_title, BorrowerId=borrowerid)
+# 		new.save()
+# 		return redirect('icon')
 
 
 

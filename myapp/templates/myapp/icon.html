@@ -52,12 +52,10 @@
                     <td>{{ book.book_id }} </td>
                     <td>{{ book.book_collection }}</td>
                     <td>
-                        {% if book.Status == "available" %}
+                        {% if book.status %}
                             <a href="{% url 'borrow' book.book_id%}">Borrow</a>
                         {% else %}
-                            {% if book.Status == 'unavailable'%}
                             <span>unavailable</span>
-                            {% endif %}
                         {% endif %}
                     </td>
                 </tr>
