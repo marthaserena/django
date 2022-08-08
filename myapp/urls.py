@@ -8,6 +8,6 @@ urlpatterns = [
     path('login/', views.Login, name="login"),
     path('register/', views.register, name="register"),
     path('icon/', views.icon, name="icon"),
-    path('borrow/', views.borrow, name="borrow")
+    path('borrow/<int:book_id>/borrow', views.borrow, name="borrow")
     
 ]

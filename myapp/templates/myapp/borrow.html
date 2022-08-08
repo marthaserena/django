@@ -22,14 +22,43 @@
       </nav>
     
     <div class="user-select">
+<<<<<<< HEAD
+      <p>BORROW BOOK</p>
+      <form method="get" action="">
+        <label>StudentId:</label>
+        <input type="number" placeholder="Student ID" required min="0"><br><br>
+        <label>ReturnDate:</label>
+        <input type="datetime-local" placeholder="" required><br><br>
+        <a href="{% url 'icon' book.id %}" class="ml-2">Borrow</a>
+
+      </form>
+      
+=======
       <p>YOUR BOOK</p>
+      <form action = "" method="get">
       <input type="number" placeholder="Enter your ID"><br>
+      <input type="number" placeholder="Enter book ID"><br>
+      <input type="datetime" placeholder="Enter Date-Taken"><br>
+      <input type="datetime" placeholder="Enter Return_Date"><br><br>
+      <button type="submit">Borrow</button><br><br>
+      <button type="submit" ><a href="/icon">Cancel</a></button>
+      </form>
+
+    </div><br>
+    
+
+    <div class="user-select">
+      <p>PENALTIES</p>
+      <form action = "" method="get">
+      <input type="number" placeholder="fine"><br>
       <input type="text" placeholder="Enter selected book "><br>
       <input type="number" placeholder="Enter book ID"><br>
-      <input type="number" placeholder="Enter Return_Date">
+      <input type="pay" placeholder="Payment"> <br>
+      <input type="datetime" placeholder="DatePaid"><br>
+      <input type="datetime" placeholder="Date_Bookreturned"><br>
+>>>>>>> 62702ff61b7e8a57bf3ee1c2c10a7d562eed8843
 
-      <!-- <button class="student-button"><a href="/login">Student</a></button>
-      <button class="librarian-button"><a href="/admin">Librarian</a></button> -->
+      </form>
+   
     </div>  
-    
   </body>

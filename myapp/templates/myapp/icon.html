@@ -21,12 +21,12 @@
             <li><a href="#about_us">ABOUT US</a></li>
             <li><a href="#contact_us">CONTACT US</a></li>
             <form action = "" method="get">
-            <input type="text" name="q" placeholder="Title search">
-            <button type="submit">Search</button>
-            <input type="text" name="r" placeholder="Subject search">
-            <button type="submit">Search</button>
-            <input type="text" name="t" placeholder="Author Search">
-            <button type="submit">Search</button>
+                <input type="text" name="q" placeholder="Title search">
+                <button type="submit">Search</button>
+                <input type="text" name="r" placeholder="Subject search">
+                <button type="submit">Search</button>
+                <input type="text" name="t" placeholder="Author Search">
+                <button type="submit">Search</button>
             </form>
         </ul>
     
@@ -53,9 +53,11 @@
                     <td>{{ book.book_collection }}</td>
                     <td>
                         {% if book.Status == "available" %}
-                            <a href="{% url 'borrow' %}">Borrow</a>
+                            <a href="{% url 'borrow' book.book_id%}">Borrow</a>
                         {% else %}
-                            {{ book.Status}}
+                            {% if book.Status == 'unavailable'%}
+                            <span>unavailable</span>
+                            {% endif %}
                         {% endif %}
                     </td>
                 </tr>
