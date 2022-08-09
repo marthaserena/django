@@ -24,6 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
 
-    urls (r'^media/(?P<path.*)$' , server,{' document_root':       settings.MEDIA_ROOT}),
-    urls (r'^static/(?P<path.*)$', server,{'document_root': settings.STATIC_ROOT}),
+    # urls (r'^media/(?P<path.*)$' , server,{' document_root':       settings.MEDIA_ROOT}),
+    # urls (r'^static/(?P<path.*)$', server,{'document_root': settings.STATIC_ROOT}),
 ]
