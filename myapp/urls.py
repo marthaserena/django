@@ -10,6 +10,6 @@ urlpatterns = [
     path('register/', views.register, name="register"),
     path('icon/', views.icon, name="icon"),
     path('borrow/<int:bookid>/borrow', views.borrow, name="borrow"),
-    path('addBorrower', views.addBorrower, name='addBorrower'),
+    # path('addBorrower', views.addBorrower, name='addBorrower'),
     
 ]
