@@ -25,6 +25,13 @@ class Book(models.Model):
     status = models.BooleanField(default=True)
     book_collection = models.CharField(max_length=300)
 
+    def Borrowedbook(self):
+        if self.book_id>1:
+            self.book_id=self.book_id-1
+            self.save()
+        else:
+            print("borrowed")
+
     def __str__(self):
         return self.book_title
 class Student(models.Model):
