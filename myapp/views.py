@@ -72,21 +72,21 @@ def logout(request):
 	logout()
 	return redirect('login')
 
-def borrow(request, bookid):
-	book = Book.objects.get(book_id=bookid)
+def borrow(request, id):
+	book = Book.objects.get(id=id)
 	book.status=False
 	book.save()
-	# return render(request, "myapp/borrow.html")
+	return render(request, "myapp/borrow.html")
 	return redirect('icon')
 
-# def addBorrower(request):
-# 	if request.method == 'POST':
-# 		bookid = request.POST['bookid']
-# 		borrowerid = request.POST['borrowerid']
-# 		book = Book.objects.get(book_id=bookid)
-# 		new = Borrowers(borrowedBook=book.book_title, BorrowerId=borrowerid)
-# 		new.save()
-# 		return redirect('icon')
+def addBorrower(request):
+	if request.method == 'POST':
+		bookid = request.POST.get('id')
+		borrowerid = request.POST['borrowerid']
+		book = Book.objects.get(book_id=bookid)
+		new = Borrowers(borrowedBook=book.book_title, BorrowerId=borrowerid)
+		new.save()
+		return redirect('icon')
 
 
 
