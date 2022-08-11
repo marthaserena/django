@@ -1,6 +1,6 @@
 from http.client import PAYMENT_REQUIRED
 # from tkinter import CASCADE
-from turtle import title
+# from turtle import title
 from xmlrpc.client import DateTime
 from django.db import models
 
@@ -24,6 +24,13 @@ class Book(models.Model):
     book_id = models.CharField(max_length=100)
     status = models.BooleanField(default=True)
     book_collection = models.CharField(max_length=300)
+
+    def Borrowedbook(self):
+        if self.book_id>1:
+            self.book_id=self.book_id-1
+            self.save()
+        else:
+            print("borrowed")
 
     def __str__(self):
         return self.book_title
