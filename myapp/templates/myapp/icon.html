@@ -53,7 +53,7 @@
                     <td>{{ book.book_collection }}</td>
                     <td>
                         {% if book.status %}
-                            <a href="{% url 'borrow' book.book_id%}">Borrow</a>
+                            <a href="{% url 'borrow' book.id %}">Borrow</a>
                         {% else %}
                             <span>unavailable</span>
                         {% endif %}

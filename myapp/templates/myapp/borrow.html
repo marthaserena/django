@@ -23,14 +23,12 @@
     
     <div class="user-select">
       <p>YOUR BOOK</p>
-      <form action = "/addBorrower" method="POST">
-        {%csrf_token%}
-      <input type="number" placeholder="Enter your ID" name="borrowerid"><br>
-      <input type="number" placeholder="Enter book ID" name="bookid"><br>
-      <input type="datetime" placeholder="Enter Date-Taken"><br>
+      <form action = "" method="POST">
+        {% csrf_token %}
+      <input type="number" placeholder="StudentId" name="borrowerid"><br>
+      <input type="datetime" placeholder="ReturnDate"><br>
       <input type="datetime" placeholder="Enter Return_Date"><br><br>
-      <button type="submit">Borrow</button><br><br>
-      <button type="submit" ><a href="/icon">Cancel</a></button>
+      <button type="submit" ><a href="/icon">Borrow</a></button>
       </form>
 
     </div><br>
