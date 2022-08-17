@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from .forms import CreatUserForm
+from .forms import CreatUserForm,BorrowerForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .models import Book
@@ -74,7 +74,16 @@ def logout(request):
 
 
 def borrow(request):
-	return render(request, "myapp/borrow.html")
+	form = BorrowerForm()
+
+	if request.method == 'POST':
+		
+		form = BorrowerForm(request.POST)
+		if form.is_valid():
+			form.save()
+
+	context = {'form':form}		
+	return render(request, "myapp/borrow.html",context)
 
 
 

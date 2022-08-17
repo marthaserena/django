@@ -23,27 +23,30 @@
     
     <div class="user-select">
       <p>YOUR BOOK</p>
-      <form action = "" method="get">
-      <input type="number" placeholder="Enter your ID"><br>
-      <input type="number" placeholder="Enter book ID"><br>
-      <input type="datetime" placeholder="Enter Date-Taken"><br>
-      <input type="datetime" placeholder="Enter Return_Date"><br><br>
-      <button type="submit">Borrow</button><br><br>
+      <form action = "" method="POST">
+        {% csrf_token %}
+         {{form}}
+
+    
+      <input  type = "submit" ><br><br>
       <button type="submit" ><a href="/icon">Cancel</a></button>
       </form>
 
     </div><br>
+
     
 
     <div class="user-select">
       <p>PENALTIES</p>
       <form action = "" method="get">
-      <input type="number" placeholder="fine"><br>
-      <input type="text" placeholder="Enter selected book "><br>
-      <input type="number" placeholder="Enter book ID"><br>
-      <input type="pay" placeholder="Payment"> <br>
-      <input type="datetime" placeholder="DatePaid"><br>
-      <input type="datetime" placeholder="Date_Bookreturned"><br>
+        <input type="number" placeholder="fine"><br>
+        <input type="text" placeholder="Enter selected book "><br>
+        <input type="number" placeholder="Enter book ID"><br>
+        <input type="pay" placeholder="Payment"> <br>
+        <input type="datetime" placeholder="DatePaid"><br>
+        <input type="datetime" placeholder="Date_Bookreturned"><br>
+  
+
 
       </form>
    
