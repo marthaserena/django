@@ -72,36 +72,36 @@ def logout(request):
 	logout()
 	return redirect('login')
 
-<<<<<<< HEAD
 
-def borrow(request):
-	form = BorrowerForm()
 
-	if request.method == 'POST':
-		
-		form = BorrowerForm(request.POST)
-		if form.is_valid():
-			form.save()
 
-	context = {'form':form}		
-	return render(request, "myapp/borrow.html",context)
-=======
 def borrow(request, id):
 	book = Book.objects.get(id=id)
 	book.status=False
 	book.save()
-	return render(request, "myapp/borrow.html")
-	return redirect('icon')
+	form = BorrowerForm()
 
-def addBorrower(request):
 	if request.method == 'POST':
-		bookid = request.POST.get('id')
-		borrowerid = request.POST['borrowerid']
-		book = Book.objects.get(book_id=bookid)
-		new = Borrowers(borrowedBook=book.book_title, BorrowerId=borrowerid)
-		new.save()
+		form = BorrowerForm(request.POST)
+		if form.is_valid():
+			form.save()
+
 		return redirect('icon')
->>>>>>> bac387262836ff27b3de1a60988edd22e323352e
+	context = {'form':form}		
+	return render(request, "myapp/borrow.html",context)
+
+
+	
+
+# def addBorrower(request):
+# 	if request.method == 'POST':
+# 		bookid = request.POST.get('id')
+# 		borrowerid = request.POST['borrowerid']
+# 		book = Book.objects.get(book_id=bookid)
+# 		new = Borrowers(borrowedBook=book.book_title, BorrowerId=borrowerid)
+# 		new.save()
+# 		return redirect('icon')
+
 
 
 
