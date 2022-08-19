@@ -24,18 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-xvglpdk%iux+983qqiyit4j_wdk_un7jg_^^ry@^c1c=!6n&_+'
 #SECRET_KEY = os.environ.get('SECRET_KEY')
-# SECRET_KEY = 'django-insecure-=#x3g#-&g)j4ws$yruv2q#8msdyer)p=2^-l)lh%=9bnm*c_f$'
-SECRET_KEY = 'django-insecure-xvglpdk%iux+983qqiyit4j_wdk_un7jg_^^ry@^c1c=!6n&_+'
+SECRET_KEY = 'django-insecure-=#x3g#-&g)j4ws$yruv2q#8msdyer)p=2^-l)lh%=9bnm*c_f$'
+# SECRET_KEY = 'django-insecure-xvglpdk%iux+983qqiyit4j_wdk_un7jg_^^ry@^c1c=!6n&_+'
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'myawesomelibapp.herokuapp.com',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition

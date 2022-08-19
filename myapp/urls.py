@@ -11,7 +11,7 @@ urlpatterns = [
     path('icon/', views.icon, name="icon"),
     path('borrow/<int:id>/', views.borrow, name="borrow"),
     #path('addBorrower', views.addBorrower, name='addBorrower')
-    path('borrow/<int:bookid>/borrow', views.borrow, name="borrow"),
+    # path('borrow/<int:bookid>/borrow', views.borrow, name="borrow"),
     # path('addBorrower', views.addBorrower, name='addBorrower'),
     
 ]

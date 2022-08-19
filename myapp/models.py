@@ -46,12 +46,12 @@ class Student(models.Model):
         return self.username
 class Borrowers (models.Model):
     borrowedBook= models.ForeignKey(Book, on_delete=models.CASCADE)
-    Return_date=models.DateTimeField(auto_now_add=True)
-    Date_taken=models.DateTimeField(auto_now_add=True)
-    BorrowerId = models.CharField(max_length=100)
+    Return_date=models.DateTimeField()
+    Date_taken=models.DateTimeField()
+    username= models.CharField(max_length=100)
 
     def __str__(self):
-        return self.BorrowerId
+        return self.username
 
 class Payments(models.Model):
     fine=models.ForeignKey(Student,on_delete=models.CASCADE)
