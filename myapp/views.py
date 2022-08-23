@@ -80,14 +80,14 @@ def borrow(request, id):
 	book = Book.objects.get(id=id)
 	book.status=False
 	book.save()
+	messages.info(request, 'Please Endavour to pick your borrowed book within  3hours time')
 	form = BorrowerForm()
 
 	if request.method == 'POST':
 		form = BorrowerForm(request.POST)
 		if form.is_valid():
 			form.save()
-
-		return redirect('icon')
+			return redirect('icon')
 	context = {'form':form}		
 	return render(request, "myapp/borrow.html",context)
 
