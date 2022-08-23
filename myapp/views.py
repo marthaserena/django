@@ -69,8 +69,9 @@ def icon(request):
 
 
 def logout(request):
-	logout()
-	return redirect('login')
+	#logout()
+
+	return render(request, "myapp/login.html")
 
 
 
@@ -93,14 +94,6 @@ def borrow(request, id):
 
 	
 
-# def addBorrower(request):
-# 	if request.method == 'POST':
-# 		bookid = request.POST.get('id')
-# 		borrowerid = request.POST['borrowerid']
-# 		book = Book.objects.get(book_id=bookid)
-# 		new = Borrowers(borrowedBook=book.book_title, BorrowerId=borrowerid)
-# 		new.save()
-# 		return redirect('icon')
 
 
 

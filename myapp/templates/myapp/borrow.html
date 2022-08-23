@@ -14,7 +14,7 @@
         <ul>
           <li id="logo">Borrow_Status</li>
           <li><a href="/icon">Dashboard</a></li>
-          <li><a href="#About">About</a></li>
+          <li><a href="logout">About</a></li>
           <li><a href="#Contact_Us">Contact_Us</a></li>
 
 
@@ -25,38 +25,7 @@
       <p>YOUR BOOK</p>
       <form action = "" method="POST">
         {% csrf_token %}
-
-         {{form.as_p}}
-         
-    
-      <input  type = "submit" value="icon"><br><br>
-
-     
- 
-      </form>
-
-    </div><br>
-
-    
-
-    <div class="user-select">
-      <p>PENALTIES</p>
-      <form action = "" method="get">
-        {%csrf_token%}
-
-        <input type="number" placeholder="fine"><br>
-        <input type="text" placeholder="Enter selected book "><br>
-        <input type="number" placeholder="Enter book ID"><br>
-        <input type="pay" placeholder="Payment"> <br>
-        <input type="datetime" placeholder="DatePaid"><br>
-        <input type="datetime" placeholder="Date_Bookreturned"><br>
-  
-
-
-     
-
-
-      </form>
-   
-    </div>  
-  </body>
+        {{form.as_p}}
+        <input  type = "submit" value="Borrow"><br><br>
+     </form>
+</body>
